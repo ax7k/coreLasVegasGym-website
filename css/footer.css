@@ -1,0 +1,160 @@
+footer {
+  background-color: var(--dark-color);
+  color: var(--white);
+  padding: 80px 0 20px;
+}
+
+.copy-text:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.no-hover:hover {
+    color: #aaa;
+    cursor: default;
+}
+.social-icons {
+  padding-top: 1em;
+}
+
+.footer-logo {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: var(--primary-color);
+}
+
+.footer-logo p {
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+li {
+  color: #aaa;
+}
+
+.footer-links h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #aaa;
+  transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.footer-newsletter p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.footer-newsletter form {
+  display: flex;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-newsletter button {
+  border-radius: 0 5px 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .footer-newsletter button {
+    border-radius: 5px;
+    width: 100%;
+  }
+}

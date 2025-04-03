@@ -1,0 +1,132 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navElementHousing {
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    transition: var(--transition);
+	column-gap: 5%;
+}
+
+.navbar.scrolled {
+    background-color: var(--dark-color);
+    padding: 15px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+	display: flex;
+	gap: 2%;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+	white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    color: var(--white);
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li a.active {
+    color: var(--primary-color);
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links ul li a:hover::after,
+.nav-links ul li a.active::after {
+    width: 100%;
+}
+
+.fa-bars {
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+#openMenu {
+	opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .navbar.scrolled {
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--dark-color);
+        padding: 50px 0;
+        z-index: 1001;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+    
+    .fa-bars {
+        display: block;
+    }
+
+	#openMenu {
+		opacity: 100;
+	}
+}
